@@ -2,3 +2,11 @@ general:
 steps:
   mtaBuild:
     buildTarget: 'CF'
+
+cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    cloudFoundry:
+      org: 'sndbox'
+      space: 'Piper-Dev'
+      credentialsId: 'CF_CREDENTIALSID'
