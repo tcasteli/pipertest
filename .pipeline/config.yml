@@ -1,6 +1,8 @@
 general:
+  buildTool: "npm"
 steps:
   mtaBuild:
+    applicationName: 'Test'
     buildTarget: 'CF'
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
