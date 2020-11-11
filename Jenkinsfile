@@ -11,14 +11,3 @@ node() {
         cloudFoundryDeploy script: this
     }
 }
-
-_@Library('piper-lib-os') _
-pipeline {
-    agent { label 'SCP Fiori Build Agent' } 
-    tools { nodejs 'NodeJS' } 
-    stages{ 
-        stage('prepare'){ 
-            steps { 
-                deleteDir() 
-                checkout scm 
-                setupCommonPipelineEnvironment(script: this) } } }
